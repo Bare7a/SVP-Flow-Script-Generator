@@ -1,7 +1,7 @@
 function createAllTables(){
-    createTableFromJSON("PC", pcParameters, pcDescription);
-    createTableFromJSON("SVP",svpParameters, svpDescription);
-    createTableFromJSON("More",moreParameters, moreDescription);
+    createTableFromJSON("Computer Settings","pc", pcParameters, pcDescription);
+    createTableFromJSON("Smooth Video Project Settings","svp",svpParameters, svpDescription);
+    createTableFromJSON("More Settings","more",moreParameters, moreDescription);
 }
 
 function importAll(){

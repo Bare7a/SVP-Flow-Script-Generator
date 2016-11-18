@@ -3,7 +3,6 @@ function createHeader(){
 
 	for(var index in headerParameters){
 		ul.append($('<a/>').attr('href',headerParameters[index].link).append($('<li/>').attr('class','button').text(headerParameters[index].name)));
-		console.log(ul);
 	}
 
 	$('#header').append(ul);

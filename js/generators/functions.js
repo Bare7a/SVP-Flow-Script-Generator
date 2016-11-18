@@ -1,5 +1,5 @@
-function createTableFromJSON(name, json, description){
-    var tb = $('<table/>').attr('id',name);
+function createTableFromJSON(headerName,tableName, jsonParameters, descriptionParameters){
+    var tb = $('<table/>').attr('id',tableName);
     var tr = $('<tr/>');
     tr.append($('<th/>').text('Parameter'));
     tr.append($('<th/>').text('Custom Value'));
@@ -19,7 +19,7 @@ function createTableFromJSON(name, json, description){
                 var tdName = $('<td/>').text(element).click(function(){$(this).parent().find('td input').select()});
                 var tdCustomVal = $('<td/>').append(input).click(function(){$(this).parent().find('td input').select()});;
                 var tdDefaultValue = $('<td/>').text(json[element]).click(function(){$(this).parent().find('td input').select()});
-                var tdDescription = $('<td/>').append($('<p/>').attr('class','descriptionBox').html(description[i])).click(function(){$(this).parent().find('td input').select()});
+                var tdDescription = $('<td/>').append($('<p/>').attr('class','descriptionBox').html(descriptionParameters[i])).click(function(){$(this).parent().find('td input').select()});
 
                 tr.append(tdName.attr('class','name'));
                 tr.append(tdCustomVal.attr('class','customValue'));
@@ -30,8 +30,9 @@ function createTableFromJSON(name, json, description){
             }
         }
     }
-    createRowFromJSON(json);
+    createRowFromJSON(jsonParameters);
 
+    $("#options").append($('<h1/>').text(headerName));
     $("#options").append(tb);
 }
 

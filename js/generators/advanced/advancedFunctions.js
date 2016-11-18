@@ -1,8 +1,8 @@
 function createAllTables(){
-    createTableFromJSON("AviSynth", aviSynthParameters, aviSynthDescription);
-    createTableFromJSON("Super", superParameters, superDescription);
-    createTableFromJSON("Analyse",analyseParameters, analyseDescription);
-    createTableFromJSON("Render",renderParameters, renderDescription);
+    createTableFromJSON("Computer Settings","AviSynth", aviSynthParameters, aviSynthDescription);
+    createTableFromJSON("Super Parameters","Super", superParameters, superDescription);
+    createTableFromJSON("Analyse Parameters","Analyse",analyseParameters, analyseDescription);
+    createTableFromJSON("Render Parameters","Render",renderParameters, renderDescription);
 }
 
 function importAll(){
