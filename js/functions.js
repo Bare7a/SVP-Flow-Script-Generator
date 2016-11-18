@@ -10,5 +10,5 @@ function createHeader(){
 }
 
 function createFooter(){
-	$('#footer').append($('<p/>').html('&copy; 2016 Bare7a').append($('<a/>').attr('href','github').text(' GitHub')));
+	$('#footer').append($('<p/>').html('&copy; 2016 Bare7a').append($('<a/>').attr('href','https://github.com/Bare7a/SVP-Flow-Script-Generators').text(' GitHub')));
 }
