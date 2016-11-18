@@ -11,7 +11,7 @@
   - Auto focus on custom values when a cell from the same row was clicked
   - Auto select on all on generated scripts
   
-#How To Use
+##How To Use
 1. Download the repository from [here](https://github.com/Bare7a/SVP-Flow-Script-Generators/archive/master.zip) 
 2. Unzip it and start index.html
 3. Start editing the custom values
