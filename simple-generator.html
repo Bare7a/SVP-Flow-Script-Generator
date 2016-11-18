@@ -1,0 +1,43 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Simple AviSynth Script Generator by Bare7a</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+    <script type="text/javascript" src="js/headerParameters.js"></script>
+    <script type="text/javascript" src="js/generators/functions.js"></script>
+    <script type="text/javascript" src="js/generators/simple/descriptions/moreDescription.js"></script>
+    <script type="text/javascript" src="js/generators/simple/descriptions/pcDescription.js"></script>
+    <script type="text/javascript" src="js/generators/simple/descriptions/svpDescription.js"></script>
+    <script type="text/javascript" src="js/generators/simple/json/moreParameters.js"></script>
+    <script type="text/javascript" src="js/generators/simple/json/pcParameters.js"></script>
+    <script type="text/javascript" src="js/generators/simple/json/svpParameters.js"></script>
+    <script type="text/javascript" src="js/generators/simple/simpleFunctions.js"></script>
+</head>
+<body>
+    <div id="header">
+    </div>
+    <div id="main">
+        <div id="import">
+            <textarea id="importSettings" placeholder="Paste your settings here to import them."></textarea>
+        </div>
+        <div id="options">
+        </div>
+        <div id="output">
+            <button id="exportSettings"">Export Settings</button>
+            <textarea id="export" readonly hidden></textarea>
+            <textarea id="settings" readonly hidden></textarea>
+        </div>
+    </div>
+    <div id="footer">
+    </div>
+</body>
+<script>
+    createHeader();
+    createFooter();
+    createAllTables();
+    autoGrowInputs();
+    putEventsOnButtons();
+</script>
+</html>
