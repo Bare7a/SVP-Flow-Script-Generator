@@ -1,15 +1,15 @@
-#SVP-Flow-Script-Generators 
+#SVP-Flow-Script-Generator
 
 ##Generators
   - Advanced  - Includes all options that SVPFlow Provides
   - Simple - Includes only the essential options that SVPFlow Provides
 
 ##Features
-  - Exporting SVP-Flow-Script-Generators settings and exporting SVPFlow/AviSynth Scripts
-  - Importing SVP-Flow-Script-Generators settings
+  - Exporting SVP-Flow-Script-Generator settings and exporting SVPFlow/AviSynth Scripts
+  - Importing SVP-Flow-Script-Generator settings
   - Auto grow for inputs and text areas
   - Auto focus on custom values when a cell from the same row was clicked
-  - Auto select all text on click for the generated scripts
+  - Auto select on all on generated scripts
   
 ##How To Use
 1. Download the repository from [here](https://github.com/Bare7a/SVP-Flow-Script-Generators/archive/master.zip) 
