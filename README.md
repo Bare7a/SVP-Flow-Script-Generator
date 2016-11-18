@@ -9,7 +9,7 @@
   - Importing SVP-Flow-Script-Generators settings
   - Auto grow for inputs and text areas
   - Auto focus on custom values when a cell from the same row was clicked
-  - Auto select on all on generated scripts
+  - Auto select all text on click for the generated scripts
   
 ##How To Use
 1. Download the repository from [here](https://github.com/Bare7a/SVP-Flow-Script-Generators/archive/master.zip) 
