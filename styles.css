@@ -120,8 +120,14 @@ button:hover, .button:hover {
     width: 100%;
     margin: 5px auto;
 }
-#export, #settings {
+#aviSynth, #vapourSynth {
+    display:inline-block;
     width: 49.5%;
+    margin: 0 auto;
+}
+
+#settingsOutput, #aviSynthOutput, #vapourSynthOutput{
+  width: 100%;
 }
 #import, #output {
     background-color: #222;

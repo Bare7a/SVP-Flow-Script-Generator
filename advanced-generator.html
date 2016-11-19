@@ -6,16 +6,8 @@
     <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="js/functions.js"></script>
     <script type="text/javascript" src="js/headerParameters.js"></script>
-    <script type="text/javascript" src="js/generators/functions.js"></script>
-    <script type="text/javascript" src="js/generators/advanced/descriptions/analyseDescription.js"></script>
-    <script type="text/javascript" src="js/generators/advanced/descriptions/aviSynthDescription.js"></script>
-    <script type="text/javascript" src="js/generators/advanced/descriptions/renderDescription.js"></script>
-    <script type="text/javascript" src="js/generators/advanced/descriptions/superDescription.js"></script>
-    <script type="text/javascript" src="js/generators/advanced/json/superParameters.js"></script>
-    <script type="text/javascript" src="js/generators/advanced/json/aviSynthParameters.js"></script>
-    <script type="text/javascript" src="js/generators/advanced/json/analyseParameters.js"></script>
-    <script type="text/javascript" src="js/generators/advanced/json/renderParameters.js"></script>
-    <script type="text/javascript" src="js/generators/advanced/advancedFunctions.js"></script>
+    <script type="text/javascript" src="js/generators/descriptions/advancedDescriptions.js"></script>
+    <script type="text/javascript" src="js/generators/parameters/advancedParameters.js"></script>
 </head>
 <body>
     <div id="header">
@@ -28,8 +20,20 @@
         </div>
         <div id="output">
             <button id="exportSettings"">Export Settings</button>
-            <textarea id="export" readonly hidden></textarea>
-            <textarea id="settings" readonly hidden></textarea>
+            <div id="outputSettings" hidden>
+                <div id="vapourSynth">
+                    <h1>VapourSynth Script</h1>
+                    <textarea id="vapourSynthOutput" readonly></textarea>
+                </div>
+                <div id="aviSynth">
+                    <h1>AviSynth Script</h1>
+                    <textarea id="aviSynthOutput" readonly></textarea>
+                </div>
+                <div id="settings">
+                    <h1>Current Settings</h1>
+                    <textarea id="settingsOutput" readonly></textarea>
+                </div>
+            </div>
         </div>
     </div>
     <div id="footer">
