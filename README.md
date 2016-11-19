@@ -8,7 +8,7 @@
   - Generating VapourSynth and AviSynth Scripts ready to be used
   - Exporting SVP-Flow-Script-Generator settings 
   - Importing SVP-Flow-Script-Generator settings
-  - Auto focus on custom values when a cell from the same row was clicked
+  - Auto focus on custom values when a cell from the same row is clicked
   - Auto select all on the Current Settings, VapourSynth and AviSynth scripts when clicked
   
 ##How To Use
