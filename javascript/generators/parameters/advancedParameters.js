@@ -68,9 +68,7 @@ var analyseParameters =
 var configParameters = 
 {
     "memory" : 2048,
-    "threads": 7,
-    "source" : "ffdShow",
-    "path": "C:\\Program Files (x86)\\AviSynth\\plugins"
+    "threads": 7
 }
 
 var smoothParameters = 

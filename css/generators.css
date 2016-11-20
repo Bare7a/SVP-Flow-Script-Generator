@@ -1,0 +1,41 @@
+#importSettings, #exportSettings {
+    width: 100%;
+    margin: 5px auto;
+}
+#aviSynth, #vapourSynth {
+    display:inline-block;
+    width: 49.5%;
+    margin: 0 auto;
+}
+
+#settingsOutput, #aviSynthOutput, #vapourSynthOutput{
+  width: 100%;
+}
+#import, #output {
+    background-color: #222;
+    padding: 0 10px;
+}
+#header li{
+    display:  inline-block;
+    margin: 0 4px;
+}
+#header ul{
+    display: table;
+    padding: 5px;
+    margin: 0 auto 5px;
+}
+#footer{
+  text-align: center;
+}
+.name, .customValue, .defaultValue{
+    width: 15%;
+}
+.description{
+    width: 55%;
+}
+
+.descriptionBox{
+  width:100%;
+  display: table-cell;
+  padding: 10px;
+}

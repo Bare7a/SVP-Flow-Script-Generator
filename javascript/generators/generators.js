@@ -1,17 +1,3 @@
-function createHeader(){
-	var ul = $('<ul>');
-
-	for(var index in headerParameters){
-		ul.append($('<a/>').attr('href',headerParameters[index].link).append($('<li/>').attr('class','button').text(headerParameters[index].name)));
-	}
-
-	$('#header').append(ul);
-}
-
-function createFooter(){
-	$('#footer').append($('<p/>').html('&copy; 2016 Bare7a').append($('<a/>').attr({'href':'https://github.com/Bare7a/SVP-Flow-Script-Generator', 'target':'_blank'}).text(' GitHub')));
-}
-
 function createTableFromJSON(headerName,tableName, jsonParameters, descriptionParameters){
     var tb = $('<table/>').attr('id',tableName);
     var tr = $('<tr/>');
@@ -148,8 +134,8 @@ function exportAll(){
     var smoothJSON = JSON.stringify(smoothParameters);
     
     var settings = configJSON + "\n" + superJSON + "\n" + analyseJSON + "\n" + smoothJSON;
-    var vapourSynth = 'import vapoursynth as vs\ncore = vs.get_core(threads=' + configParameters.threads + ')\ncore.std.LoadPlugin("' + configParameters.path + '\\svpflow1_vs.dll")\ncore.std.LoadPlugin("' + configParameters.path + '\\svpflow2_vs.dll")\nclip = ' + configParameters.source + '_source()\nclip = clip.resize.Bicubic(format=vs.YUV420P8)\nsuper = core.svp1.Super(clip,"' + superJSON.replace(/"/g,"") + '")\nvectors = core.svp1.Analyse(super["clip"],super["data"],clip,"' + analyseJSON.replace(/"/g,"") + '")\nsmooth = core.svp2.SmoothFps(clip,super["clip"],super["data"],vectors["clip"],vectors["data"],"' + smoothJSON.replace(/"/g,"") + '")\nsmooth  = core.std.AssumeFPS(smooth,fpsnum=smooth.fps_num,fpsden=smooth.fps_den)\nsmooth.set_output()';
-    var aviSynth = 'SetMemoryMax(' + configParameters.memory + ')\nglobal svp_scheduler=true\nglobal threads=' + configParameters.threads + '\nSetMTMode(3,' + configParameters.threads + ')\nglobal svp_cache_fwd=' + configParameters.threads + '+2\nLoadPlugin("' + configParameters.path + '\svpflow1.dll")\nLoadPlugin("' + configParameters.path + '\svpflow2.dll")\n' + configParameters.source + '_source()\nSetMTMode(2)\nvideo_fps = last.Framerate\ninput = last\nsuper=SVSuper(input, ' + superJSON.replace(/"/g,"") + ')\nvectors=SVAnalyse(super, ' + analyseJSON.replace(/"/g,"") + ', src=input)\nSVSmoothFps(input, super, vectors, ' + smoothJSON.replace(/"/g,"") + ', mt=' + configParameters.threads + ')\nSetMTMode(1)\nGetMTMode(false) > 0 ? distributor() : last';
+    var vapourSynth = 'import vapoursynth as vs\ncore = vs.get_core(threads=' + configParameters.threads + ')\nclip = video_in\nclip = clip.resize.Bicubic(format=vs.YUV420P8)\nsuper = core.svp1.Super(clip,"' + superJSON.replace(/"/g,"") + '")\nvectors = core.svp1.Analyse(super["clip"],super["data"],clip,"' + analyseJSON.replace(/"/g,"") + '")\nsmooth = core.svp2.SmoothFps(clip,super["clip"],super["data"],vectors["clip"],vectors["data"],"' + smoothJSON.replace(/"/g,"") + '")\nsmooth = core.std.AssumeFPS(smooth,fpsnum=smooth.fps_num,fpsden=smooth.fps_den)\nsmooth.set_output()';
+    var aviSynth = 'SetMemoryMax(' + configParameters.memory + ')\nglobal svp_scheduler=true\nglobal threads=' + configParameters.threads + '\nSetMTMode(3,' + configParameters.threads + ')\nglobal svp_cache_fwd=' + configParameters.threads + '+2\nffdShow_source()\nSetMTMode(2)\nvideo_fps = last.Framerate\ninput = last\nsuper=SVSuper(input, "' + superJSON.replace(/"/g,"") + '")\nvectors=SVAnalyse(super, "' + analyseJSON.replace(/"/g,"") + '", src=input)\nSVSmoothFps(input, super, vectors, "' + smoothJSON.replace(/"/g,"") + '", mt=' + configParameters.threads + ')\nSetMTMode(1)\nGetMTMode(false) > 0 ? distributor() : last';
 
     $('#settingsOutput').val(settings);
     $('#vapourSynthOutput').val(vapourSynth);

@@ -33,9 +33,7 @@ var analyseDescription = [
 
 var configDescription = [
 "Ammount of ram to use in megabytes.",
-"Ammount of threads to use",
-"Use \"ffdShow\" or \"potplayer\" depending on what video source you are using",
-"The directory where SVPFlow1.dll and SVPFlow2.dll are installed."]
+"Ammount of threads to use",]
 
 var smoothDescription = [
 "Numerator of multiplier for frame rate change.",

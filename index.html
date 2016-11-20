@@ -1,14 +1,51 @@
-<!DOCTYPE HTML>
-<html lang="en-US">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="refresh" content="1;url=simple-generator.html">
-        <script type="text/javascript">
-            window.location.href = "simple-generator.html"
-        </script>
-        <title>Page Redirection</title>
-    </head>
-    <body>
-        <h1>If you are not redirected automatically click <a href='simple-generator.html'>here</a>!</h1>
-    </body>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Installation</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/slick.css">
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="css/installation.css">
+    <script type="text/javascript" src="javascript/libraries/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="javascript/libraries/slick.min.js"></script>
+    <script type="text/javascript" src="javascript/functions.js"></script>
+    <script type="text/javascript" src="javascript/headerParameters.js"></script>
+</head>
+<body>
+    <div id="header">
+    </div>
+    <div id="main">
+        <div class="carousel">
+          <div><h1>Header</h1><img src="http://placehold.it/350x320"><p>Content</p></div>
+          <div><h1>Header</h1><img src="http://placehold.it/350x321"><p>Content</p></div>
+          <div><h1>Header</h1><img src="http://placehold.it/350x322"><p>Content</p></div>
+          <div><h1>Header</h1><img src="http://placehold.it/350x323"><p>Content</p></div>
+          <div><h1>Header</h1><img src="http://placehold.it/350x324"><p>Content</p></div>
+        </div>
+    </div>
+    <div id="footer">
+    </div>
+</body>
+<script>
+createHeader();
+createFooter();
+$(document).ready(function(){
+    $('.carousel').slick({
+        dots: true,
+        infinite: true,
+        speed: 250,
+        fade: true,
+        cssEase: 'linear'
+    });
+
+    $(document).keydown(function(e){
+        if (e.keyCode == 37) { 
+            $('.slick-prev').click();
+        }
+        if (e.keyCode == 39) { 
+            $('.slick-next').click();
+        }
+    });
+});
+</script>
 </html>
