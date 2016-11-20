@@ -1,8 +1,8 @@
 #SVP-Flow-Script-Generator
 
 ##Generators
-  - Advanced  	- Includes all options that SVPFlow provides
-  - Simple		- Includes only the essential options that SVPFlow provides
+  - Advanced - Includes all options that SVPFlow provides
+  - Simple - Includes only the essential options that SVPFlow provides
 
 ##Features
   - Generating VapourSynth and AviSynth Scripts ready to be used
