@@ -17,5 +17,5 @@
 3. Start editing the custom values
 4. Press "Export Settings" when you are done editing
 5. Copy the content of "Current Settings" in a file so you can import it later if you want to change something
-6. Copy the content of AviSynth Script, AviSynth+ Script or Vapour Synth Scrip to ffdShow or PotPlayer.
+6. Copy the content of AviSynth Script, AviSynth+ Script or Vapour Synth Script to ffdShow or PotPlayer.
 7. If you aren't happy with the video playback, copy the settings from 5. and paste them into the import field

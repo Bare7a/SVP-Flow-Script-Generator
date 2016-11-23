@@ -1,59 +1,91 @@
 #main{
 	margin: 0 auto;
 	background-color: #191919;
-	width: 600px;
+	width: 700px;
 	height: 500px;
 	border: 3px solid #686767;
 	border-radius: 10px;
 }
-.carousel{
-	margin: 0 auto;
-	width: 520px;
-	height: 460px;
+.carousel {
+  max-width: 600px;
+  max-height: 500px;
+  position: relative;
+  margin: auto;
+  text-align: center;
 }
-.carousel img{
-	margin: 0 auto;
+.carousel  img{
+  max-width: 600px;
+  max-height: 400px;
+  position: relative;
 }
-.carousel p{
-	margin: 15px;
-	padding: 10px;
-	background-color: #333;
-	border-radius: 10px;
+.prev, .next {
+  cursor: pointer;
+  width: auto;
+  position: absolute;
+  top: 300px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
 }
-.slick-dots
-{
+.constrolls{
+    width: 600px;
     position: absolute;
-    bottom: -25px;
-
-    display: block;
-
-    width: 100%;
-    padding: 0;
-    margin: 0;
+    top: 400px;
 }
-.slick-dots li
-{
-    width: 20px;
-    height: 20px;
-    margin: 0 5px;
-    padding: 0;
+.next {
+    border-radius: 3px 0 0 3px;
+    margin-left: 650px;
 }
-.slick-dots li button
-{
-    width: 20px;
-    height: 20px;
-    padding: 5px;
-    color: transparent;
-    background: transparent;
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
 }
-.slick-dots li button:before
-{
-    font-size: 6px;
-    width: 20px;
-    height: 20px;
-    color: white;
+.slides{
+    width: 600px;
+    height: 500px;
 }
-.slick-dots li.slick-active button:before
-{
-    color: cyan;
+.caption {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+.dot {
+  cursor:pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+  background-color: #717171;
+}
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
 }
