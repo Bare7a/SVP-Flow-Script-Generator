@@ -8,8 +8,9 @@
   - Generating AviSynth, AviSynth+ and VapourSynth Scripts which are ready to be used
   - Exporting SVP-Flow-Script-Generator settings 
   - Importing SVP-Flow-Script-Generator settings
+  - Easy to follow guide on how to setup a media player in order to use the generated scripts
   - Auto focus on custom values when a cell from the same row is clicked
-  - Auto select all on the Current Settings, AviSynth AviSynth+ scripts and VapourSynth when clicked
+  - Auto select all on the Current Settings, AviSynth, AviSynth+ scripts and VapourSynth when clicked
   
 ##How To Use
 1. Download the repository from [here](https://github.com/Bare7a/SVP-Flow-Script-Generators/archive/master.zip) 
