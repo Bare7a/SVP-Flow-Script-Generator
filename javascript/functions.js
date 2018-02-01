@@ -9,5 +9,5 @@ function createHeader(){
 }
 
 function createFooter(){
-	$('#footer').append($('<p/>').html('&copy; 2016 Bare7a').append($('<a/>').attr({'href':'https://github.com/Bare7a/SVP-Flow-Script-Generator', 'target':'_blank'}).text(' GitHub')));
+	$('#footer').append($('<p/>').html('&copy; 2018 Bare7a').append($('<a/>').attr({'href':'https://github.com/Bare7a/SVP-Flow-Script-Generator', 'target':'_blank'}).text(' GitHub')));
 }
