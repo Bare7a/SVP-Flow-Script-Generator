@@ -46,7 +46,7 @@ var smoothParameters =
 		abs:true
 	},
 	algo:13,
-	gpuid:21,
+	gpuid:0,
 	mask:{
 		cover:70,
 		area:70,
